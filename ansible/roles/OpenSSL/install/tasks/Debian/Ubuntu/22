@@ -1,0 +1,6 @@
+---
+- name: Install Barrier
+  ansible.builtin.apt:
+    pkg:
+    - barrier
+  become: true

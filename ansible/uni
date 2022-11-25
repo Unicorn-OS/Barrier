@@ -1,8 +1,8 @@
 ---
-- hosts: local #, fedora, ubuntu
+- hosts: barrier
   vars:
     somevar: "value"
     source: "package"
 
   roles:
-  - App/default
+  - Barrier/default

@@ -1,0 +1,15 @@
+---
+
+- name: Create a directory
+  ansible.builtin.file:
+    path: "/home/{{ansible_user}}/.var/app/com.github.debauchee.barrier/data/barrier/SSL/Fingerprints"
+    state: directory
+    mode: '0755'
+
+- name: generate key
+  ansible.builtin.shell: "{{item}}"
+  args:
+    creates: "/home/{{ansible_user}}/.var/app/com.github.debauchee.barrier/data/barrier/SSL/Barrier.pem"
+  with_items:
+  - openssl req -x509 -nodes -days 365 -subj /CN=Barrier -newkey rsa:4096 -keyout ~/.var/app/com.github.debauchee.barrier/data/barrier/SSL/Barrier.pem -out ~/.var/app/com.github.debauchee.barrier/data/barrier/SSL/Barrier.pem
+  - openssl x509 -fingerprint -sha1 -noout -in ~/.var/app/com.github.debauchee.barrier/data/barrier/SSL/Barrier.pem > ~/.var/app/com.github.debauchee.barrier/data/barrier/SSL/Fingerprints/Local.txt
