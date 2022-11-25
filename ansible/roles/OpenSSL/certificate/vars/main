@@ -1,0 +1,9 @@
+---
+
+ssl_key_folder: "/home/{{ansible_user}}/.local/share/barrier/SSL"
+
+ssl_key_file: "{{ssl_key_folder}}/Barrier.pem"
+
+ssl_fingerprint_folder: "{{ssl_key_folder}}/Fingerprints"
+
+ssl_fingerprint_file: "{{ssl_fingerprint_folder}}/Local.txt"
