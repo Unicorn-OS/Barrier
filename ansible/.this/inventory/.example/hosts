@@ -6,16 +6,16 @@ ansible_connection=local
 ansible_user=me
 ansible_become_password=u
 
-[node1:children]
+[server:children]
 local
 
-[node2]
+[client]
 10.0.0.160
 
-[node2:vars]
+[client:vars]
 ansible_user=me
 ansible_become_password=u
 
 [barrier:children]
-node1
-node2
+client
+server

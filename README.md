@@ -1,2 +1,7 @@
 # Barrier
-Home: https://github.com/debauchee/barrier, List: https://alternativeto.net/software/barrier/about/, from: https://alternativeto.net/software/synergy/
+Home: https://github.com/debauchee/barrier
+
+
+## relation:
+- List: https://alternativeto.net/software/barrier/,
+- alternative: https://alternativeto.net/software/synergy/

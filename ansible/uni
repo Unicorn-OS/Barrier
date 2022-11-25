@@ -5,4 +5,6 @@
     source: "package"
 
   roles:
-  - Barrier/default
+  # - Barrier/default
+  # - config
+  - config/both
