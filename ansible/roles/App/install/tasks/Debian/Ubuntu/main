@@ -1,0 +1,7 @@
+---
+- name: Install 
+  ansible.builtin.apt:
+    pkg:
+    - foo
+    - foo-tools
+  become: true
