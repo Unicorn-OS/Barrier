@@ -1,6 +1,0 @@
----
-- name: Install OpenSSL
-  ansible.builtin.apt:
-    pkg:
-    - openssl
-  become: true
