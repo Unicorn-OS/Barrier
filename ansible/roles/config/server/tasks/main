@@ -1,8 +1,0 @@
----
-- name: Copy Server config
-  ansible.builtin.copy:
-    src: simple/server/.config/Debauchee
-    dest: "/home/{{ansible_user}}/.config/"
-    owner: "{{ansible_user}}"
-    group: "{{ansible_user}}"
-  # delegate_to: '{{ groups.server[0] }}'

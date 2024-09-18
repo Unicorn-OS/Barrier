@@ -1,9 +1,0 @@
----
-
-- name: Copy Client config
-  ansible.builtin.copy:
-    src: simple/client/.config/Debauchee
-    dest: "/home/{{ansible_user}}/.config/"
-    owner: "{{ansible_user}}"
-    group: "{{ansible_user}}"
-  delegate_to: "{{groups['client'][0]}}"
